@@ -13,13 +13,13 @@ window.onload = function () {
             nodes[node].id = 'IMG' + node;
             let li = document.createElement('li');
             let a = document.createElement('a');
-            a.href ='#' +nodes[node].id;
+            a.href = '#' +nodes[node].id;
             a.innerText = nodes[node].alt;
             li.appendChild(a);
             ul.appendChild(li);
         }
     }
-    body.insertBefore(ul,body.firstChild);
+    body.insertBefore(ul, body.firstChild);
 };
 
 function walkDOMGetNodes (element, elements) {
@@ -31,7 +31,7 @@ function walkDOMGetNodes (element, elements) {
         return;
     }
     for (let child in element.childNodes){
-        walkDOMGetNodes(element.childNodes[child],elements);
+        walkDOMGetNodes(element.childNodes[child], elements);
     }
 
 return elements;}

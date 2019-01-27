@@ -19,16 +19,16 @@ window.onload = function () {
     forceHttps();
     cambiarClaseTag('p','importante','resaltar');
     nombrarElementos('a','importante','importante');
-}
+};
 
 function forceHttps() {
     let links = document.getElementsByTagName('a');
 
-    for (let link in links){
+    for (let link in links) {
         if (links[link].href && links[link].href.includes('http://')) {
             links[link].href = links[link].href.replace('http://', 'https://');
             console.log(links[link].href);
-        } else{
+        } else {
             links[link].href = 'https://' + links[link].href;
         }
     }
@@ -37,8 +37,8 @@ function forceHttps() {
 function cambiarClaseTag(tag, claseActual, nuevaClase) {
     let elementos = document.getElementsByTagName(tag);
 
-    for (let elemento in elementos){
-        if (elementos[elemento].className === claseActual){
+    for (let elemento in elementos) {
+        if (elementos[elemento].className === claseActual) {
             elementos[elemento].className = nuevaClase;
         }
     }

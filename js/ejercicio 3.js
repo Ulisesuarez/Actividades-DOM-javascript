@@ -64,7 +64,7 @@ function createTable(data) {
     let table = document.createElement('table');
     let thRow = document.createElement('tr');
     let headers = {};
-    let elements = []
+    let elements = [];
     for (let element in data){
         switch (typeof data[element]) {
 
@@ -82,7 +82,7 @@ function createTable(data) {
         }
         console.log(headers);
     }
-    for (let header in headers){
+    for (let header in headers) {
         if (headers.hasOwnProperty(headers[header])) {
             let th = document.createElement('th');
             th.innerText = headers[header];
@@ -90,7 +90,7 @@ function createTable(data) {
         }
     }
     table.appendChild(thRow);
-    for (let element in elements){
+    for (let element in elements) {
         let tr = document.createElement('tr');
         for (let td in elements[element]){
             tr.appendChild(elements[element][td]);
